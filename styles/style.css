@@ -1,0 +1,80 @@
+/* Variables */
+:root {
+  --primary: rgba(0, 168, 123, 0.83);
+  --secondary: rgba(175, 175, 175, 1);
+  --tertiary: rgba(27, 55, 66, 0.69);
+}
+
+/* General Settings */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: rgba(9, 21, 46, 1);
+}
+
+.start {
+  position: relative;
+}
+.start__logo-or-color-gradient {
+  display: block;
+  width: 67px;
+  height: 71.32px;
+  margin: 16px auto 0 auto;
+  background-image: url(../assets/logos/my-logo-mobile..svg);
+  background-repeat: no-repeat;
+}
+.start__name {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 47px;
+  letter-spacing: -0.02em;
+  color: var(--secondary);
+}
+.start__proffesion {
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  font-size: 3.4rem;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+}
+.start__profile-photo {
+  position: absolute;
+  width: 543px;
+  height: 407px;
+  left: -91px;
+  top: 324px;
+}
+.start__color-gradient {
+  position: absolute;
+  width: 372px;
+  height: 299px;
+  left: 3px;
+  top: 635px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    #070f23 28.65%,
+    #070f22 51.04%,
+    #09152e 100%
+  );
+}
+.start__arrow {
+  display: block;
+  width: 23px;
+  height: 12px;
+  left: 173px;
+  top: 744px;
+  background-image: url(../assets/logos/my-logo-mobile..svg);
+  background-repeat: no-repeat;
+}
