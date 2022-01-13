@@ -104,3 +104,7 @@ dist
 .tern-port
 
 assets
+src/input.css
+package.json
+package-lock.json
+tailwind.config.js
