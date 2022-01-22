@@ -1,11 +1,29 @@
 <template>
-  <div class="bg-green-750 h-17 relative">
-    <h2 class="text-center text-title text-gray-350 pt-1">My Stack</h2>
-    <span
-      class="absolute bottom-poligon rotate-140 block z-20 w-0 h-0 border-t-polygon border-t-emerald-550 border-l-polygon border-l-transparent border-r-polygon border-r-transparent"
-    ></span>
+  <div class="h-17">
+    <div class="w-full h-12 relative" :class="background">
+      <h2
+        class="text-center text-title text-gray-350 align-bottom absolute top-4 left-1/4 right-1/4"
+      >
+        {{ title }}
+      </h2>
+    </div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      class="h-10 w-full"
+      :class="background"
+      preserveAspectRatio="none"
+    >
+      <polygon fill="#09152E" points="0,100 100,100 0,0"></polygon>
+    </svg>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: "Title",
+  props: {
+    background: { type: String },
+    title: { type: String },
+  },
+};
 </script>

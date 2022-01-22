@@ -1,22 +1,25 @@
 <template>
   <div class="h-screen flex flex-col items-center relative">
-    <img src="../assets/logos/my-logo-mobile..svg" alt="logo-mobile" />
-    <h1 class="text-center font-bold text-name text-gray-350">
+    <img
+      src="../assets/logos/my-logo-mobile..svg"
+      alt="logo-mobile"
+      class="pb-2"
+    />
+    <h1 class="text-center font-bold text-name text-gray-350 pb-2">
       Lucas García Bertaina
     </h1>
-    <h2 class="text-center font-normal text-proffesion text-green-750">
+    <h2 class="text-center font-normal text-proffesion text-green-750 pb-2">
       FULLSTACK WEB DEVELOPER
     </h2>
 
-    <div class="w-screen h-15 absolute bg-emerald-550 bottom-0 inset-x-0">
+    <div class="w-screen bg-emerald-550 relative">
       <img
-        class="my-0 mx-auto w-72"
-        src="../assets/img/image-profile.png"
+        class="my-0 mx-auto w-full"
         alt="profile-photo"
+        src="../assets/img/image-profile-2.png"
       />
       <div
-        class="bg-gradient-to-b from-transparent via-emerald-550 to-emerald-950 w-screen h-20 z-10 absolute bottom-0 flex flex-col justify-end items-center"
-        @click="activate()"
+        class="bg-gradient-to-b from-transparent via-emerald-950 to-emerald-550 w-screen h-20 z-10 absolute bottom-0 flex flex-col justify-end items-center"
       >
         <img class="w-7 h-7" src="../assets/logos/arrow.png" alt="" />
       </div>
@@ -26,11 +29,18 @@
 <script>
 export default {
   name: "Home",
-  props: {
-    activate: { type: Function },
-  },
+  props: {},
   data: () => {
     return {};
+  },
+  beforeMount() {
+    this.setImageHome();
+  },
+  methods: {
+    setImageHome() {
+      const height = window.innerHeight;
+      this.$store.commit("setImageHome", height);
+    },
   },
 };
 </script>

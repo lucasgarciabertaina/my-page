@@ -1,5 +1,5 @@
 export const state = () => ({
-  showComponents: false,
+  imageHome: "",
 });
 
 
@@ -8,7 +8,8 @@ export const actions = {
 }
 
 export const mutations = {
-  setComponent(state) {
-    state.showComponents = state.showComponents ? false : true;
+  setImageHome(state, height) {
+    state.imageHome = height > 700 ? "../assets/img/image-profile-2.png"
+      : "..assets/img/image-profile-1.png";
   }
 };

@@ -1,5 +1,5 @@
 <template>
-  <div name="about-me" class="flex bg-emerald-950">
+  <div name="about-me" class="flex bg-emerald-550">
     <div class="w-1/2 flex flex-col items-center pb-5">
       <h2 class="text-center font-light text-title text-green-750 pb-1">
         About Me
