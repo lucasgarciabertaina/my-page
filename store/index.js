@@ -9,7 +9,7 @@ export const actions = {
 
 export const mutations = {
   setImageHome(state, height) {
-    state.imageHome = height > 700 ? "../assets/img/image-profile-2.png"
-      : "..assets/img/image-profile-1.png";
+    state.imageHome = height > 700 ? "image-profile-2.png"
+      : "image-profile-1.png";
   }
 };

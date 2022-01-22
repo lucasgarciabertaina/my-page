@@ -16,7 +16,7 @@
       <img
         class="my-0 mx-auto w-full"
         alt="profile-photo"
-        src="../assets/img/image-profile-2.png"
+        :src="'../assets/img/' + this.imageHome"
       />
       <div
         class="bg-gradient-to-b from-transparent via-emerald-950 to-emerald-550 w-screen h-20 z-10 absolute bottom-0 flex flex-col justify-end items-center"
@@ -31,15 +31,16 @@ export default {
   name: "Home",
   props: {},
   data: () => {
-    return {};
+    return {
+      imageHome: "",
+    };
   },
-  beforeMount() {
+  mounted() {
     this.setImageHome();
   },
   methods: {
     setImageHome() {
-      const height = window.innerHeight;
-      this.$store.commit("setImageHome", height);
+      this.imageHome = this.$store.state.imageHome;
     },
   },
 };
