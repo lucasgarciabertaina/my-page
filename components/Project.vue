@@ -1,8 +1,10 @@
 <template>
-  <div class="flex flex-col items-center w-9/12 mx-auto pt-10">
-    <h3 class="font-semibold text-xl text-green-750 pr-28 pb-5">
-      {{ projectName }}
-    </h3>
+  <div class="flex flex-col items-center w-9/12 mx-auto">
+    <div class="w-screen">
+      <h3 class="font-semibold text-xl text-green-750 text-left pl-10 pb-10">
+        {{ projectName }}
+      </h3>
+    </div>
     <div class="w-10/12 mx-auto pb-5">
       <p class="text-gray-350 text-lg font-normal">{{ projectDescription }}</p>
     </div>
@@ -18,7 +20,7 @@ export default {
     projectName: { type: String },
     projectDescription: { type: String },
     projectImage: { type: String, default: "" },
-    projectGithub: { type: String }
+    projectGithub: { type: String },
   },
 };
 </script>
