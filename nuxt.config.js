@@ -7,18 +7,19 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'my-page',
+    title: 'Lucas García Bertaina',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Welcome to my online portfolio, I hope you enjoy it!' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'robots', content: 'index, follow' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'static/favicon.ico' }
     ]
   },
 
@@ -50,6 +51,9 @@ export default {
         tailwindcss: {},
         autoprefixer: {},
       }
-    }
+    },
+    vue: {
+      prettify: false
+    },
   }
 }

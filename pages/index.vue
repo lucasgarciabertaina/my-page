@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-emerald-550 m-0 p-0 box-content font-page">
-    <home :profilePhoto="this.$store.state.imageHome" />
+  <div class="bg-emerald-550 m-0 p-0 box-content font-page w-full h-full">
+    <home :windowHeight="windowHeight" />
     <about-me />
     <my-stack />
     <projection />
@@ -34,7 +34,9 @@ export default {
     Footer,
   },
   data: () => {
-    return {};
+    return {
+      windowHeight: "",
+    };
   },
   beforeMount() {
     this.setImageHome();
@@ -42,7 +44,9 @@ export default {
   methods: {
     setImageHome() {
       const height = window.innerHeight;
-      this.$store.commit("setImageHome", height);
+      if (height <= 667) {
+        this.windowHeight = "hidden";
+      }
     },
   },
 };

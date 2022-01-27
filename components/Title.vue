@@ -1,12 +1,10 @@
 <template>
-  <div class="h-17">
-    <div class="w-full h-12 relative" :class="background">
-      <h2
-        class="text-center text-title text-gray-350 align-bottom absolute top-4 left-1.5 right-1.5"
-      >
-        {{ title }}
-      </h2>
-    </div>
+  <div class="w-full h-14" :class="background">
+    <h2
+      class="text-center text-title text-gray-350 align-bottom pt-5 pb-0 mb-0"
+    >
+      {{ title }}
+    </h2>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
